@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+:root{
+    --font-family-Montserrat: "Montserrat", serif;
+    --font-family-Berkshire-Swash: "Berkshire Swash", serif;
+    --font-family-cookie: "Cookie", serif;
+    --font-family-Poppins: "Poppins", serif;
+    --text-color-light-green: #cfd3bc;
+    --text-color-dark-green: #a9ae91;
+    --text-color-white: #fff;
+    --text-color-black:#212529;
+    --bg-color-dark-green: #a9ae91;
+    --bg-color-light-green: #cfd3bc;
+    --bg-color-black: #212529;
+    --bg-color-white: #fff;
+    --color: #9176FF;
+    --dark-color: #2b2b2b;
+    --dark-icon-color: #fff;
+    --light-color: #d9d9d9;
+    --light-icon-color: #FFDE59;  
+}
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; 
+  padding:0;
+  box-sizing: border-box;
+  outline: none; 
+  border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+/* light to dark mode CSS */
+.btn-mode{
+    background-color: #fff;
+    width: 65px;
+    height: 25px;
+    border-radius: 10em;
+    border: 1px solid #f7f7f7;
+    padding: 0 0.5em;
+    box-shadow: inset 0 8px 60px rgba(0,0,0, .1),
+                inset 0 8px 8px rgba(0,0,0, .1),
+                inset 0 -4px 4px rgba(0,0,0, .1);
+  
+    position: relative;
+  
+    display: flex;
+    align-items: center;
+  
+    cursor: pointer;
+}
+
+.btn-indicator{
+  background-color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  box-shadow: 0 8px 40px rgba(0,0,0, .2);
+  transition: transform .3s ease;
+}
+
+.btn-icon-container{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-icon{
+  color: var(--light-icon-color);
+}
+
+/* light to dark mod button animation */
+.btn-icon.animated{
+  animation: spin 0.5s;
+}
+
+@keyframes spin{
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* dark mode css */
+body.darkmode{
+  background-color: var(--dark-color);
+  color: var(--text-color-white) !important;
+}
+
+.darkmode .btn-mode{
+  border: none;
+  box-shadow: inset 0 8px 60px rgba(0,0,0, .3),
+              inset 8px 0 8px rgba(0,0,0, .3),
+              inset 0 -4px 4px rgba(0,0,0, .3);
+}
+
+.darkmode .btn-indicator{
+  transform: translateX(40px);
+  background-color: var(--dark-color);
+  box-shadow: 0 8px 40px rgba(0,0,0, .3);
+}
+
+.darkmode .btn-icon{
+  color: var(--dark-icon-color);
+}
+.btn{
+    border: none !important;
+}
+
+
+/* navbar */
+.navbar{
+    background-color: var(--bg-color-light-green);
+    box-shadow: 5px 0 5px #212529,-5px 0 1px #212529;
+}
+
+/* navbar mobile mode toggleer icon*/
+
+.navbar-toggler{
+    border: none !important;
+}
+.navbar input:focus{
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.header>div:nth-child(3) button:focus{
+    border: none !important;
+    box-shadow: none !important;
+}
+.header>a:nth-child(1) {
+    max-width: 165px !important;
+}
+.main h1{
+  color: var(--bg-color-dark-green);
+  font-weight: bold;
+}
+.main button{
+  background-color: var(--bg-color-dark-green);
+  color: #fff;
+}
+.main button:hover,
+.main button .active,:not(.btn-check)+.btn:active{
+  background-color: var(--bg-color-light-green) !important;
+  color: #fff !important;
+}
+.breadcrumb-item.active{
+  color: var(--text-color-dark-green) !important;
+}
+.billing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+}
+.darkmode .billing form{
+    color: var(--text-color-white);
+    background-color: var(--dark-color);
+    border: 1px solid var(--bg-color-dark-green);
+}
+.billing form{
+  padding:20px;
+  border-radius: 1rem;
+  max-width:700px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.billing form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.billing form .row .col{
+  flex:1 1 250px;
+}
+.darkmode .billing form .row .col .title{
+    color: var(--text-color-white);
+}
+.billing form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.billing form .row .col .inputBox{
+
+  margin:15px 0;
+}
+
+.billing form .row .col .inputBox label{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.billing form .row .col .inputBox input{
+  width: 100%;
+  border-radius: 1.5rem;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.billing form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.billing form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.billing form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.billing form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.billing form .submit-btn{
+  width: 100%;
+  border-radius: 1.5rem;
+  padding:12px;
+  font-size: 17px;
+  background: var(--bg-color-dark-green);
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.billing form .submit-btn:hover{
+  background: var(--bg-color-light-green);
+}
+.footer{
+    background-color: var(--bg-color-black);
+    padding: 80px 0;
+}
+.footer p{
+    color: var(--text-color-white);
+    margin-top: 16px;
+}
+.footer h3{
+    font-family: var(--font-family-Poppins);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: var(--text-color-white);
+}
+.footer ul{
+    list-style-type: none;
+    padding: 0;
+}
+.footer i{
+    font-size: 24px;
+    margin-right: 10px;
+    color: var(--text-color-white);
+}
+.footer i:hover{
+    color: var(--text-color-dark-green);
+}
+.footer ul li a{
+    font-size: 16px;
+    font-family: var(--font-family-Poppins);
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--text-color-white);
+}
+.footer ul li a:hover{
+    text-decoration: underline;
+    color: var(--text-color-dark-green);
+}
