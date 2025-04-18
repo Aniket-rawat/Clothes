@@ -810,6 +810,24 @@
                 </div>
             </div>
         </footer>
+        <script>
+           $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:2
+                    },
+                    700:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+                }
+            })
+        </script>
         <!-- create a bottom to top bar -->
         <script>
             const backToTop = document.getElementById('back-to-top');
@@ -879,24 +897,7 @@
             })
             
         </script>
-        <script>
-           $('.owl-carousel').owlCarousel({
-                loop:true,
-                margin:10,
-                nav:true,
-                responsive:{
-                    0:{
-                        items:2
-                    },
-                    700:{
-                        items:3
-                    },
-                    1000:{
-                        items:5
-                    }
-                }
-            })
-        </script>
+        
         <!-- slider for clothes -->
         <script>
             let slideIndex = 1;
