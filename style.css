@@ -794,8 +794,16 @@ header .container{
         background: none;
         padding-top: 0 !important;
     }
+    .carousel{
+        padding: 0 !important;
+    }
     .header2>div>div>div:nth-child(2) .carousel-inner{
+        position: relative;
         height: 397px;
+    }
+    .header2>div>div>div:nth-child(2) .carousel-inner .carousel-item:nth-child(2){
+        position: absolute;
+        bottom: 0 !important;
     }
     .arrivals>div>div:nth-child(2),
     .sales>div>div:nth-child(2){
