@@ -845,7 +845,7 @@ header .container{
         transition: transform 0.4s;
         transform: scale(1.2); 
         position: relative;
-        left: 90px;
+        left: 100px;
         bottom: 50px;
     }
     .style>div>div:nth-child(2)>div:nth-child(2) img:hover{
