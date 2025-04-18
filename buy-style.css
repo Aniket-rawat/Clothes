@@ -549,13 +549,8 @@ header{
     color: #fff !important;
     
 }
-/* .similar{
-    position: relative;
-    z-index: 1;
-} */
 .similar .owl-carousel{
     position: relative;
-    
 }
 .similar .owl-prev span{
     position: absolute;
