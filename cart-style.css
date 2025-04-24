@@ -149,26 +149,20 @@ body.darkmode{
     background-color: #a9ae91;
     color: #fff;
 }
-.darkmode .modal-body label{
-    color: #fff !important;
-}
-.darkmode .modal-body .form-floating>.form-control:focus~label::after{
-    background-color: #212529 !important;
-}
-.darkmode .modal-body label{
-    color: #fff !important;
-}
-.darkmode .modal-body .form-floating>.form-control:focus~label::after{
-    background-color: #212529 !important;
-}
 .modal-body>div>div:nth-child(1)>div:nth-child(2)>div:nth-child(2) a{
     color: var(--bg-color-dark-green);
     text-decoration: none;
-    transition: 0.4s all;
+    transition: 0.5s all;
 }
 .modal-body>div>div:nth-child(1)>div:nth-child(2)>div:nth-child(2) a:hover{
     color: var(--bg-color-light-green);
     text-decoration: underline !important;
+}
+.darkmode .modal-body label{
+    color: #fff !important;
+}
+.darkmode .modal-body .form-floating>.form-control:focus~label::after{
+    background-color: #212529 !important;
 }
 .darkmode .modal-body #floatingInput{
     color: var(--text-color-white);
@@ -183,7 +177,7 @@ body.darkmode{
     padding-left: 15px;
 } */
 .modal-body>div>div:nth-child(1)>div:nth-child(2) button{
-    background-color: var(--bg-color-dark-green);
+    background-color: #a9ae91;
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
@@ -256,6 +250,9 @@ header{
 .darkmode .search{
     box-shadow: 0 0.125rem 0.5rem var(--bg-color-light-green) !important;
     background-color: var(--dark-color);
+}
+.search{
+    background-color: var(--bg-color-white);
 }
 
 .search button,
@@ -475,8 +472,8 @@ del{
     .cart>div>div:nth-child(2)>div:nth-child(1){
         padding: 0 !important;
     }
-     /* model */
-     .modal-body>div>div:nth-child(1)>div:nth-child(1){
+    /* model */
+    .modal-body>div>div:nth-child(1)>div:nth-child(1){
         padding: 30px 16px !important;
         background-size: 140px !important;
     }
@@ -607,6 +604,10 @@ del{
     }
     .modal-body>div>div:nth-child(1)>div:nth-child(1){
         padding-bottom: 65px !important;
+        border-radius: 0.5rem;
+    }
+    .modal-body>div>div:nth-child(1){
+        padding: 0 12px;
     }
     .modal-body>div>div:nth-child(1)>div:nth-child(2) p small{
         font-size: 12px;

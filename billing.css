@@ -149,6 +149,34 @@ body.darkmode{
 .breadcrumb-item.active{
   color: var(--text-color-dark-green) !important;
 }
+
+
+/* ********** */
+
+.form-control.is-valid, .was-validated .form-control:valid{
+  border-color: var(--bg-color-dark-green) !important;
+}
+.form-control.is-valid:focus, .was-validated .form-control:valid:focus,
+.form-check-input.is-valid:focus, .was-validated .form-check-input:valid:focus,
+.form-select.is-valid:focus, .was-validated .form-select:valid:focus {
+  box-shadow: 0 0 0 .25rem rgba( 207, 211, 188, .25) !important;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: var(--bg-color-dark-green) !important;
+  border: 1px solid var(--bg-color-dark-green) !important;
+}
+
+input[type="checkbox"]{
+  border-color: var(--bg-color-dark-green) !important;
+}
+.form-check label{
+  color: var(--bg-color-dark-green ) !important;
+}
+/* ********** */
+
+
 .billing{
   display: flex;
   justify-content: center;

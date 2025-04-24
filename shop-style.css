@@ -276,7 +276,9 @@ header{
     box-shadow: 0 0.125rem 0.5rem var(--bg-color-light-green) !important;
     background-color: var(--dark-color);
 }
-
+.search{
+    background-color: var(--bg-color-white);
+}
 .search button{
     background-color: #a9ae91 !important;
 }

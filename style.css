@@ -203,11 +203,13 @@ h2{
 }
 /* navbar */
 .navbar{
-    width: 100%;
+    width: 100% !important;
     background-color: var(--bg-color-light-green);
     box-shadow: 5px 0 5px #212529,-5px 0 1px #212529;
-    position: relative;
-    z-index: 1;
+    /* position: fixed;
+    top: 0;
+     */
+     z-index: 9999; 
 }
 
 /* navbar mobile mode toggleer icon*/
@@ -220,7 +222,8 @@ h2{
     box-shadow: none !important;
 }
 
-header .container{
+header .container,
+.navbar>div{
     max-width: 1600px !important;
 }
 .header>div:nth-child(3) button:focus{
@@ -261,7 +264,9 @@ header .container{
     background-color: var(--dark-color);
     box-shadow: 0 0.125rem 0.5rem var(--bg-color-light-green) !important;
 }
-
+.search{
+    background-color: var(--bg-color-white);
+}
 .search button{
     background-color: #a9ae91 !important;
 }
@@ -657,9 +662,9 @@ header .container{
         max-height: 350px;
         overflow-y: scroll;
     } */
+    
     .header2>div>div>div:nth-child(2) img {
         float: none !important;
-        margin: auto;
     }
 
     .header2{
@@ -745,6 +750,9 @@ header .container{
         grid-row: 2/3;
         grid-column: 1/5;
     }
+    
+
+
     h1{
         line-height:40px;
         max-width: 100% !important;
@@ -798,13 +806,16 @@ header .container{
         padding: 0 !important;
     }
     .header2>div>div>div:nth-child(2) .carousel-inner{
+        margin-top: 5px;
         position: relative;
         height: 397px;
     }
     .header2>div>div>div:nth-child(2) .carousel-inner .carousel-item:nth-child(2){
         position: absolute;
-        bottom: 0 !important;
+        top: 0 !important;
     }
+    
+    
     .arrivals>div>div:nth-child(2),
     .sales>div>div:nth-child(2){
         row-gap: 20px;
@@ -845,7 +856,7 @@ header .container{
         transition: transform 0.4s;
         transform: scale(1.2); 
         position: relative;
-        left: 100px;
+        left: 90px;
         bottom: 50px;
     }
     .style>div>div:nth-child(2)>div:nth-child(2) img:hover{
