@@ -812,7 +812,7 @@ header .container,
     }
     .header2>div>div>div:nth-child(2) .carousel-inner .carousel-item:nth-child(2){
         position: absolute;
-        top: 0 !important;
+        bottom: 0 !important;
     }
     
     
