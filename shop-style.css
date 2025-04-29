@@ -207,8 +207,9 @@ header{
 .darkmode .modal-body label{
     color: #fff !important;
 }
-.darkmode .modal-body .form-floating>.form-control:focus~label::after{
-    background-color: #212529 !important;
+.darkmode .modal-body .form-floating>.form-control:focus~label::after,
+.form-floating>.form-control:not(:placeholder-shown)~label::after{
+    background-color: transparent !important;
 }
 .darkmode .modal-body #floatingInput{
     color: var(--text-color-white);
@@ -528,18 +529,24 @@ header{
     .header{
         display: grid !important; 
     }
+    .header>a:nth-child(1) {
+        max-width: 145px !important;
+    }
     .header>div:nth-child(3) {
         grid-row: 1/2;
         grid-column: 2/4;
     }
     .header>div:nth-child(3) a{
         font-size: 16px;
-        padding: 6px 10px;
+        padding: 6px 8px;
     }
     .header>div:nth-child(3) a span{
         display: none;
     }
-    
+    .header>div:nth-child(3) a i,
+    .header>div:nth-child(3) button i{
+        font-size: 20px !important;
+    }
     .header>div:nth-child(3){
         margin-left: 18px;
     }

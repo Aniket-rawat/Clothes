@@ -176,8 +176,9 @@ h2{
 .darkmode .modal-body label{
     color: #fff !important;
 }
-.darkmode .modal-body .form-floating>.form-control:focus~label::after{
-    background-color: #212529 !important;
+.darkmode .modal-body .form-floating>.form-control:focus~label::after,
+.form-floating>.form-control:not(:placeholder-shown)~label::after{
+    background-color: transparent !important;
 }
 .darkmode .modal-body #floatingInput{
     color: var(--text-color-white);
@@ -666,7 +667,7 @@ header .container,
     .header2>div>div>div:nth-child(2) img {
         float: none !important;
     }
-
+    
     .header2{
         padding: 0 !important;
     }
@@ -738,6 +739,18 @@ header .container,
     }
 
 }
+@media (max-width:380px){
+    .header2>div>div>div:nth-child(2) .carousel-inner{
+        margin-top: 5px;
+        position: relative;
+        height: 397px;
+    }
+    .header2>div>div>div:nth-child(2) .carousel-inner .carousel-item:nth-child(2){
+        position: absolute;
+        bottom: 0 !important;
+    }
+}
+
  @media (max-width:600px){
     .header{
         display: grid !important; 
@@ -750,9 +763,9 @@ header .container,
         grid-row: 2/3;
         grid-column: 1/5;
     }
-    
-
-
+    .header>a:nth-child(1) {
+        max-width: 145px !important;
+    }
     h1{
         line-height:40px;
         max-width: 100% !important;
@@ -769,7 +782,7 @@ header .container,
     }
     .header>div:nth-child(3) a,
     .header>div:nth-child(3) button{
-        padding: 6px 8px;
+        padding: 6px 8px !important;
     }
     .header>div:nth-child(3) a i,
     .header>div:nth-child(3) button i{
@@ -807,12 +820,7 @@ header .container,
     }
     .header2>div>div>div:nth-child(2) .carousel-inner{
         margin-top: 5px;
-        position: relative;
-        height: 397px;
-    }
-    .header2>div>div>div:nth-child(2) .carousel-inner .carousel-item:nth-child(2){
-        position: absolute;
-        bottom: 0 !important;
+        height: 397px !important;
     }
     
     
@@ -887,6 +895,9 @@ header .container,
         width: 0;
     }
     /* modal */
+    .modal{
+        z-index: 9999 !important;
+    }
     .modal-content>button:nth-child(1){
         padding-top: 0 !important;
         position: absolute;
